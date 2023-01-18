@@ -12,5 +12,14 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
-}
+  return tutorials.map(tutorial => titleCaser(tutorial));
+};
+
+const testString = 'what does the this keyword mean?';
+
+function titleCaser(string) {
+  string = string.split(' ');
+  const newString = string.map(word => word.replace(word[0], word[0].toUpperCase()));
+  console.log(newString.join(' '));
+  return newString.join(' ');
+};
